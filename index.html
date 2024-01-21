@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <style>
+        body{
+            background-color: #f9f9f9;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="https://e1.pxfuel.com/desktop-wallpaper/722/16/desktop-wallpaper-peach-and-goma-mochi-cat-gaming-sticker-decal-vinyl-bumper-sticker-decal-waterproof-5-mochi-mochi-peach-cat.jpg" alt="Cute animated illustration" style="width: 50vmin; height: 50vmin;">
+    </div>
+    <div class="gif_container">
+        <div>
+            <h1 class="header_text">Happy S²versary, Chicoo!!</h1>
+            <br>
+            <h1 class="header_text">Let’s play a game?</h1>
+        </div>
+        <div>
+            <button class="btn" onclick="nextPage()">Play</button>
+        </div>
+    </div>
+
+    <script>
+        function nextPage() {
+            window.location.href = "q1.html";
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const body = document.body;
+
+            function createHeart() {
+                const heart = document.createElement("div");
+                heart.className = "heart";
+                heart.style.left = Math.random() * window.innerWidth + "px";
+                body.appendChild(heart);
+
+                setTimeout(() => {
+                    heart.remove();
+                }, 2000);
+            }
+
+            setInterval(createHeart, 100);
+        });
+    </script>
+</body>
+</html>
